@@ -1,0 +1,1693 @@
+digraph "Diagram" {
+  splines = "ortho";
+  pad = "1.0";
+  nodesep = "0.60";
+  ranksep = "0.75";
+  fontname = "Sans-Serif";
+  fontsize = "15";
+  dpi = "200";
+  rankdir = "BT";
+  compound = "true";
+  fontcolor = "#222222";
+  edge [
+    color = "#D5871488",
+    penwidth = 2,
+    arrowhead = "dot",
+    arrowtail = "dot",
+  ];
+  node [
+    shape = "box",
+    style = "rounded",
+    fixedsize = true,
+    width = 1.7,
+    height = 1.7,
+    labelloc = "c",
+    imagescale = true,
+    fontname = "Sans-Serif",
+    fontsize = 8,
+    margin = 8,
+  ];
+  subgraph "X11CiCdStack" {
+    subgraph "cluster-SubGraph.X11CiCdStack" {
+      graph [
+        label = "X11CiCdStack",
+        labelloc = "b",
+        labeljust = "l",
+        margin = "10",
+        fontsize = "16",
+        penwidth = "2",
+        pencolor = "#888888",
+        style = "filled,rounded",
+        fillcolor = "#e4e4e4",
+      ];
+      "X11CiCdStack/SingletonLambda9548389087724e42a3ec3a06b1234567" [
+        label = "\nSingletonLambda954838",
+        fontsize = 12,
+        image = "/home/khine/go/src/github.com/x11-us/infra/node_modules/cdk-dia/icons/aws/Service/Arch_Compute/64/Arch_AWS-Lambda_64@5x.png",
+        imagescale = "true",
+        imagepos = "tc",
+        penwidth = "0",
+        shape = "node",
+        fixedsize = "true",
+        labelloc = "b",
+        width = 2,
+        height = 2.4819999999999998,
+      ];
+      "X11CiCdStack/LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8a/ServiceRole" [
+        label = " ServiceRole",
+        fontsize = 12,
+        image = "/home/khine/go/src/github.com/x11-us/infra/node_modules/cdk-dia/icons/aws/Service/Arch_Security-Identity-Compliance/64/Arch_AWS-Identity-and-Access-Management_64@5x.png",
+        imagescale = "true",
+        imagepos = "tc",
+        penwidth = "0",
+        shape = "node",
+        fixedsize = "true",
+        labelloc = "b",
+        width = 1.2,
+        height = 1.466,
+      ];
+      subgraph "cluster-SubGraph.CDKPipeline" {
+        graph [
+          label = "CDKPipeline",
+          labelloc = "b",
+          labeljust = "l",
+          margin = "10",
+          fontsize = "16",
+          penwidth = "2",
+          pencolor = "#888888",
+          style = "filled,rounded",
+          fillcolor = "#d6d6d6",
+        ];
+        "X11CiCdStack/CDKPipeline/Pipeline" [
+          label = " Pipeline",
+          fontsize = 12,
+          image = "/home/khine/go/src/github.com/x11-us/infra/node_modules/cdk-dia/icons/aws/Service/Arch_Developer- Tools/64/Arch_AWS-CodePipeline_64@5x.png",
+          imagescale = "true",
+          imagepos = "tc",
+          penwidth = "0",
+          shape = "node",
+          fixedsize = "true",
+          labelloc = "b",
+          width = 1.2,
+          height = 1.466,
+        ];
+        "X11CiCdStack/CDKPipeline/CodeBuildActionRole" [
+          label = " CodeBuildActionRole",
+          fontsize = 12,
+          image = "/home/khine/go/src/github.com/x11-us/infra/node_modules/cdk-dia/icons/aws/Service/Arch_Security-Identity-Compliance/64/Arch_AWS-Identity-and-Access-Management_64@5x.png",
+          imagescale = "true",
+          imagepos = "tc",
+          penwidth = "0",
+          shape = "node",
+          fixedsize = "true",
+          labelloc = "b",
+          width = 1.2,
+          height = 1.466,
+        ];
+        "X11CiCdStack/CDKPipeline/UpdatePipeline/SelfMutation" [
+          label = " SelfMutation",
+          fontsize = 12,
+          image = "/home/khine/go/src/github.com/x11-us/infra/node_modules/cdk-dia/icons/aws/Service/Arch_Developer- Tools/64/Arch_Amazon-CodeBuild_64@5x.png",
+          imagescale = "true",
+          imagepos = "tc",
+          penwidth = "0",
+          shape = "node",
+          fixedsize = "true",
+          labelloc = "b",
+          width = 1.2,
+          height = 1.466,
+        ];
+        subgraph "cluster-SubGraph.Assets" {
+          graph [
+            label = "Assets",
+            labelloc = "b",
+            labeljust = "l",
+            margin = "10",
+            fontsize = "16",
+            penwidth = "2",
+            pencolor = "#888888",
+            style = "filled,rounded",
+            fillcolor = "#c7c7c7",
+          ];
+          "X11CiCdStack/CDKPipeline/Assets/FileRole" [
+            label = " FileRole",
+            fontsize = 12,
+            image = "/home/khine/go/src/github.com/x11-us/infra/node_modules/cdk-dia/icons/aws/Service/Arch_Security-Identity-Compliance/64/Arch_AWS-Identity-and-Access-Management_64@5x.png",
+            imagescale = "true",
+            imagepos = "tc",
+            penwidth = "0",
+            shape = "node",
+            fixedsize = "true",
+            labelloc = "b",
+            width = 1.2,
+            height = 1.466,
+          ];
+          "X11CiCdStack/CDKPipeline/Assets/FileAsset1" [
+            label = " FileAsset1",
+            fontsize = 12,
+            image = "/home/khine/go/src/github.com/x11-us/infra/node_modules/cdk-dia/icons/aws/Service/Arch_Developer- Tools/64/Arch_Amazon-CodeBuild_64@5x.png",
+            imagescale = "true",
+            imagepos = "tc",
+            penwidth = "0",
+            shape = "node",
+            fixedsize = "true",
+            labelloc = "b",
+            width = 1.2,
+            height = 1.466,
+          ];
+          "X11CiCdStack/CDKPipeline/Assets/FileAsset10" [
+            label = " FileAsset10",
+            fontsize = 12,
+            image = "/home/khine/go/src/github.com/x11-us/infra/node_modules/cdk-dia/icons/aws/Service/Arch_Developer- Tools/64/Arch_Amazon-CodeBuild_64@5x.png",
+            imagescale = "true",
+            imagepos = "tc",
+            penwidth = "0",
+            shape = "node",
+            fixedsize = "true",
+            labelloc = "b",
+            width = 1.2,
+            height = 1.466,
+          ];
+          "X11CiCdStack/CDKPipeline/Assets/FileAsset11" [
+            label = " FileAsset11",
+            fontsize = 12,
+            image = "/home/khine/go/src/github.com/x11-us/infra/node_modules/cdk-dia/icons/aws/Service/Arch_Developer- Tools/64/Arch_Amazon-CodeBuild_64@5x.png",
+            imagescale = "true",
+            imagepos = "tc",
+            penwidth = "0",
+            shape = "node",
+            fixedsize = "true",
+            labelloc = "b",
+            width = 1.2,
+            height = 1.466,
+          ];
+          "X11CiCdStack/CDKPipeline/Assets/FileAsset12" [
+            label = " FileAsset12",
+            fontsize = 12,
+            image = "/home/khine/go/src/github.com/x11-us/infra/node_modules/cdk-dia/icons/aws/Service/Arch_Developer- Tools/64/Arch_Amazon-CodeBuild_64@5x.png",
+            imagescale = "true",
+            imagepos = "tc",
+            penwidth = "0",
+            shape = "node",
+            fixedsize = "true",
+            labelloc = "b",
+            width = 1.2,
+            height = 1.466,
+          ];
+          "X11CiCdStack/CDKPipeline/Assets/FileAsset13" [
+            label = " FileAsset13",
+            fontsize = 12,
+            image = "/home/khine/go/src/github.com/x11-us/infra/node_modules/cdk-dia/icons/aws/Service/Arch_Developer- Tools/64/Arch_Amazon-CodeBuild_64@5x.png",
+            imagescale = "true",
+            imagepos = "tc",
+            penwidth = "0",
+            shape = "node",
+            fixedsize = "true",
+            labelloc = "b",
+            width = 1.2,
+            height = 1.466,
+          ];
+          "X11CiCdStack/CDKPipeline/Assets/FileAsset14" [
+            label = " FileAsset14",
+            fontsize = 12,
+            image = "/home/khine/go/src/github.com/x11-us/infra/node_modules/cdk-dia/icons/aws/Service/Arch_Developer- Tools/64/Arch_Amazon-CodeBuild_64@5x.png",
+            imagescale = "true",
+            imagepos = "tc",
+            penwidth = "0",
+            shape = "node",
+            fixedsize = "true",
+            labelloc = "b",
+            width = 1.2,
+            height = 1.466,
+          ];
+          "X11CiCdStack/CDKPipeline/Assets/FileAsset15" [
+            label = " FileAsset15",
+            fontsize = 12,
+            image = "/home/khine/go/src/github.com/x11-us/infra/node_modules/cdk-dia/icons/aws/Service/Arch_Developer- Tools/64/Arch_Amazon-CodeBuild_64@5x.png",
+            imagescale = "true",
+            imagepos = "tc",
+            penwidth = "0",
+            shape = "node",
+            fixedsize = "true",
+            labelloc = "b",
+            width = 1.2,
+            height = 1.466,
+          ];
+          "X11CiCdStack/CDKPipeline/Assets/FileAsset16" [
+            label = " FileAsset16",
+            fontsize = 12,
+            image = "/home/khine/go/src/github.com/x11-us/infra/node_modules/cdk-dia/icons/aws/Service/Arch_Developer- Tools/64/Arch_Amazon-CodeBuild_64@5x.png",
+            imagescale = "true",
+            imagepos = "tc",
+            penwidth = "0",
+            shape = "node",
+            fixedsize = "true",
+            labelloc = "b",
+            width = 1.2,
+            height = 1.466,
+          ];
+          "X11CiCdStack/CDKPipeline/Assets/FileAsset17" [
+            label = " FileAsset17",
+            fontsize = 12,
+            image = "/home/khine/go/src/github.com/x11-us/infra/node_modules/cdk-dia/icons/aws/Service/Arch_Developer- Tools/64/Arch_Amazon-CodeBuild_64@5x.png",
+            imagescale = "true",
+            imagepos = "tc",
+            penwidth = "0",
+            shape = "node",
+            fixedsize = "true",
+            labelloc = "b",
+            width = 1.2,
+            height = 1.466,
+          ];
+          "X11CiCdStack/CDKPipeline/Assets/FileAsset18" [
+            label = " FileAsset18",
+            fontsize = 12,
+            image = "/home/khine/go/src/github.com/x11-us/infra/node_modules/cdk-dia/icons/aws/Service/Arch_Developer- Tools/64/Arch_Amazon-CodeBuild_64@5x.png",
+            imagescale = "true",
+            imagepos = "tc",
+            penwidth = "0",
+            shape = "node",
+            fixedsize = "true",
+            labelloc = "b",
+            width = 1.2,
+            height = 1.466,
+          ];
+          "X11CiCdStack/CDKPipeline/Assets/FileAsset19" [
+            label = " FileAsset19",
+            fontsize = 12,
+            image = "/home/khine/go/src/github.com/x11-us/infra/node_modules/cdk-dia/icons/aws/Service/Arch_Developer- Tools/64/Arch_Amazon-CodeBuild_64@5x.png",
+            imagescale = "true",
+            imagepos = "tc",
+            penwidth = "0",
+            shape = "node",
+            fixedsize = "true",
+            labelloc = "b",
+            width = 1.2,
+            height = 1.466,
+          ];
+          "X11CiCdStack/CDKPipeline/Assets/FileAsset2" [
+            label = " FileAsset2",
+            fontsize = 12,
+            image = "/home/khine/go/src/github.com/x11-us/infra/node_modules/cdk-dia/icons/aws/Service/Arch_Developer- Tools/64/Arch_Amazon-CodeBuild_64@5x.png",
+            imagescale = "true",
+            imagepos = "tc",
+            penwidth = "0",
+            shape = "node",
+            fixedsize = "true",
+            labelloc = "b",
+            width = 1.2,
+            height = 1.466,
+          ];
+          "X11CiCdStack/CDKPipeline/Assets/FileAsset20" [
+            label = " FileAsset20",
+            fontsize = 12,
+            image = "/home/khine/go/src/github.com/x11-us/infra/node_modules/cdk-dia/icons/aws/Service/Arch_Developer- Tools/64/Arch_Amazon-CodeBuild_64@5x.png",
+            imagescale = "true",
+            imagepos = "tc",
+            penwidth = "0",
+            shape = "node",
+            fixedsize = "true",
+            labelloc = "b",
+            width = 1.2,
+            height = 1.466,
+          ];
+          "X11CiCdStack/CDKPipeline/Assets/FileAsset3" [
+            label = " FileAsset3",
+            fontsize = 12,
+            image = "/home/khine/go/src/github.com/x11-us/infra/node_modules/cdk-dia/icons/aws/Service/Arch_Developer- Tools/64/Arch_Amazon-CodeBuild_64@5x.png",
+            imagescale = "true",
+            imagepos = "tc",
+            penwidth = "0",
+            shape = "node",
+            fixedsize = "true",
+            labelloc = "b",
+            width = 1.2,
+            height = 1.466,
+          ];
+          "X11CiCdStack/CDKPipeline/Assets/FileAsset4" [
+            label = " FileAsset4",
+            fontsize = 12,
+            image = "/home/khine/go/src/github.com/x11-us/infra/node_modules/cdk-dia/icons/aws/Service/Arch_Developer- Tools/64/Arch_Amazon-CodeBuild_64@5x.png",
+            imagescale = "true",
+            imagepos = "tc",
+            penwidth = "0",
+            shape = "node",
+            fixedsize = "true",
+            labelloc = "b",
+            width = 1.2,
+            height = 1.466,
+          ];
+          "X11CiCdStack/CDKPipeline/Assets/FileAsset5" [
+            label = " FileAsset5",
+            fontsize = 12,
+            image = "/home/khine/go/src/github.com/x11-us/infra/node_modules/cdk-dia/icons/aws/Service/Arch_Developer- Tools/64/Arch_Amazon-CodeBuild_64@5x.png",
+            imagescale = "true",
+            imagepos = "tc",
+            penwidth = "0",
+            shape = "node",
+            fixedsize = "true",
+            labelloc = "b",
+            width = 1.2,
+            height = 1.466,
+          ];
+          "X11CiCdStack/CDKPipeline/Assets/FileAsset6" [
+            label = " FileAsset6",
+            fontsize = 12,
+            image = "/home/khine/go/src/github.com/x11-us/infra/node_modules/cdk-dia/icons/aws/Service/Arch_Developer- Tools/64/Arch_Amazon-CodeBuild_64@5x.png",
+            imagescale = "true",
+            imagepos = "tc",
+            penwidth = "0",
+            shape = "node",
+            fixedsize = "true",
+            labelloc = "b",
+            width = 1.2,
+            height = 1.466,
+          ];
+          "X11CiCdStack/CDKPipeline/Assets/FileAsset7" [
+            label = " FileAsset7",
+            fontsize = 12,
+            image = "/home/khine/go/src/github.com/x11-us/infra/node_modules/cdk-dia/icons/aws/Service/Arch_Developer- Tools/64/Arch_Amazon-CodeBuild_64@5x.png",
+            imagescale = "true",
+            imagepos = "tc",
+            penwidth = "0",
+            shape = "node",
+            fixedsize = "true",
+            labelloc = "b",
+            width = 1.2,
+            height = 1.466,
+          ];
+          "X11CiCdStack/CDKPipeline/Assets/FileAsset8" [
+            label = " FileAsset8",
+            fontsize = 12,
+            image = "/home/khine/go/src/github.com/x11-us/infra/node_modules/cdk-dia/icons/aws/Service/Arch_Developer- Tools/64/Arch_Amazon-CodeBuild_64@5x.png",
+            imagescale = "true",
+            imagepos = "tc",
+            penwidth = "0",
+            shape = "node",
+            fixedsize = "true",
+            labelloc = "b",
+            width = 1.2,
+            height = 1.466,
+          ];
+          "X11CiCdStack/CDKPipeline/Assets/FileAsset9" [
+            label = " FileAsset9",
+            fontsize = 12,
+            image = "/home/khine/go/src/github.com/x11-us/infra/node_modules/cdk-dia/icons/aws/Service/Arch_Developer- Tools/64/Arch_Amazon-CodeBuild_64@5x.png",
+            imagescale = "true",
+            imagepos = "tc",
+            penwidth = "0",
+            shape = "node",
+            fixedsize = "true",
+            labelloc = "b",
+            width = 1.2,
+            height = 1.466,
+          ];
+        }
+      }
+      subgraph "cluster-SubGraph.CentralisedStack" {
+        graph [
+          label = "CentralisedStack",
+          labelloc = "b",
+          labeljust = "l",
+          margin = "10",
+          fontsize = "16",
+          penwidth = "2",
+          pencolor = "#888888",
+          style = "filled,rounded",
+          fillcolor = "#d6d6d6",
+        ];
+        subgraph "cluster-SubGraph.CentralisedStack" {
+          graph [
+            label = "CentralisedStack",
+            labelloc = "b",
+            labeljust = "l",
+            margin = "10",
+            fontsize = "16",
+            penwidth = "2",
+            pencolor = "#888888",
+            style = "filled,rounded",
+            fillcolor = "#c7c7c7",
+          ];
+          "X11CiCdStack/CentralisedStack/CentralisedStack/LogsBucket" [
+            label = " LogsBucket",
+            fontsize = 12,
+            image = "/home/khine/go/src/github.com/x11-us/infra/node_modules/cdk-dia/icons/aws/Service/Arch_Storage/64/Arch_Amazon-S3-Standard_64@5x.png",
+            imagescale = "true",
+            imagepos = "tc",
+            penwidth = "0",
+            shape = "node",
+            fixedsize = "true",
+            labelloc = "b",
+            width = 2,
+            height = 2.266,
+          ];
+        }
+      }
+      subgraph "cluster-SubGraph.Dev" {
+        graph [
+          label = "Dev",
+          labelloc = "b",
+          labeljust = "l",
+          margin = "10",
+          fontsize = "16",
+          penwidth = "2",
+          pencolor = "#888888",
+          style = "filled,rounded",
+          fillcolor = "#d6d6d6",
+        ];
+        subgraph "cluster-SubGraph.CommonStack" {
+          graph [
+            label = "CommonStack",
+            labelloc = "b",
+            labeljust = "l",
+            margin = "10",
+            fontsize = "16",
+            penwidth = "2",
+            pencolor = "#888888",
+            style = "filled,rounded",
+            fillcolor = "#c7c7c7",
+          ];
+          "X11CiCdStack/Dev/CommonStack/CommonBucket" [
+            label = " CommonBucket",
+            fontsize = 12,
+            image = "/home/khine/go/src/github.com/x11-us/infra/node_modules/cdk-dia/icons/aws/Service/Arch_Storage/64/Arch_Amazon-S3-Standard_64@5x.png",
+            imagescale = "true",
+            imagepos = "tc",
+            penwidth = "0",
+            shape = "node",
+            fixedsize = "true",
+            labelloc = "b",
+            width = 2,
+            height = 2.266,
+          ];
+          "X11CiCdStack/Dev/CommonStack/CloudFrontOAI" [
+            label = " CloudFrontOAI",
+            fontsize = 12,
+            image = "/home/khine/go/src/github.com/x11-us/infra/node_modules/cdk-dia/icons/aws/Resource/Res_Security-Identity-and-Compliance/Res_48_Dark/Res_AWS-Identity-Access-Management_Permissions_48_Dark_gen.png",
+            imagescale = "true",
+            imagepos = "tc",
+            penwidth = "0",
+            shape = "node",
+            fixedsize = "true",
+            labelloc = "b",
+            width = 2,
+            height = 2.266,
+          ];
+          "X11CiCdStack/Dev/CommonStack/CodepipelineArtifactsBucket" [
+            label = "\nCodepipelineArtifacts",
+            fontsize = 12,
+            image = "/home/khine/go/src/github.com/x11-us/infra/node_modules/cdk-dia/icons/aws/Service/Arch_Storage/64/Arch_Amazon-S3-Standard_64@5x.png",
+            imagescale = "true",
+            imagepos = "tc",
+            penwidth = "0",
+            shape = "node",
+            fixedsize = "true",
+            labelloc = "b",
+            width = 2,
+            height = 2.4819999999999998,
+          ];
+        }
+        subgraph "cluster-SubGraph.SesStack" {
+          graph [
+            label = "SesStack",
+            labelloc = "b",
+            labeljust = "l",
+            margin = "10",
+            fontsize = "16",
+            penwidth = "2",
+            pencolor = "#888888",
+            style = "filled,rounded",
+            fillcolor = "#c7c7c7",
+          ];
+          "X11CiCdStack/Dev/SesStack/sesNotificationsTopic" [
+            label = "\nsesNotificationsTopic",
+            fontsize = 12,
+            image = "/home/khine/go/src/github.com/x11-us/infra/node_modules/cdk-dia/icons/aws/Service/Arch_App-Integration/Arch_64/Arch_AWS-Simple-Notification-Service_64@5x.png",
+            imagescale = "true",
+            imagepos = "tc",
+            penwidth = "0",
+            shape = "node",
+            fixedsize = "true",
+            labelloc = "b",
+            width = 2,
+            height = 2.4819999999999998,
+          ];
+          "X11CiCdStack/Dev/SesStack/defaultConfigSet" [
+            label = " defaultConfigSet",
+            fontsize = 12,
+            image = "/home/khine/go/src/github.com/x11-us/infra/node_modules/cdk-dia/icons/aws/Service/Arch_Customer-Enagagement/64/Arch_AWS-Simple-Email-Service_64@5x.png",
+            imagescale = "true",
+            imagepos = "tc",
+            penwidth = "0",
+            shape = "node",
+            fixedsize = "true",
+            labelloc = "b",
+            width = 1.2,
+            height = 1.466,
+          ];
+          "X11CiCdStack/Dev/SesStack/defaultNotifications" [
+            label = " SES\ndefaultNotifications",
+            fontsize = 12,
+            image = "/home/khine/go/src/github.com/x11-us/infra/node_modules/cdk-dia/icons/aws/Service/Arch_Customer-Enagagement/64/Arch_AWS-Simple-Email-Service_64@5x.png",
+            imagescale = "true",
+            imagepos = "tc",
+            penwidth = "0",
+            shape = "node",
+            fixedsize = "true",
+            labelloc = "b",
+            width = 1.2,
+            height = 1.682,
+          ];
+          "X11CiCdStack/Dev/SesStack/domainIdentity" [
+            label = " domainIdentity",
+            fontsize = 12,
+            image = "/home/khine/go/src/github.com/x11-us/infra/node_modules/cdk-dia/icons/aws/Service/Arch_Customer-Enagagement/64/Arch_AWS-Simple-Email-Service_64@5x.png",
+            imagescale = "true",
+            imagepos = "tc",
+            penwidth = "0",
+            shape = "node",
+            fixedsize = "true",
+            labelloc = "b",
+            width = 1.2,
+            height = 1.466,
+          ];
+          "X11CiCdStack/Dev/SesStack/EmailIdentity0" [
+            label = " EmailIdentity0",
+            fontsize = 12,
+            image = "/home/khine/go/src/github.com/x11-us/infra/node_modules/cdk-dia/icons/aws/Service/Arch_Customer-Enagagement/64/Arch_AWS-Simple-Email-Service_64@5x.png",
+            imagescale = "true",
+            imagepos = "tc",
+            penwidth = "0",
+            shape = "node",
+            fixedsize = "true",
+            labelloc = "b",
+            width = 1.2,
+            height = 1.466,
+          ];
+        }
+        subgraph "cluster-SubGraph.PasswordlessStack" {
+          graph [
+            label = "PasswordlessStack",
+            labelloc = "b",
+            labeljust = "l",
+            margin = "10",
+            fontsize = "16",
+            penwidth = "2",
+            pencolor = "#888888",
+            style = "filled,rounded",
+            fillcolor = "#c7c7c7",
+          ];
+          "X11CiCdStack/Dev/PasswordlessStack/UserPool" [
+            label = " UserPool",
+            fontsize = 12,
+            image = "/home/khine/go/src/github.com/x11-us/infra/node_modules/cdk-dia/icons/aws/Service/Arch_Security-Identity-Compliance/64/Arch_Amazon-Cognito_64.png",
+            imagescale = "true",
+            imagepos = "tc",
+            penwidth = "0",
+            shape = "node",
+            fixedsize = "true",
+            labelloc = "b",
+            width = 1.2,
+            height = 1.466,
+          ];
+          "X11CiCdStack/Dev/PasswordlessStack/SecretsTablePasswordless" [
+            label = "\nSecretsTablePasswordl",
+            fontsize = 12,
+            image = "/home/khine/go/src/github.com/x11-us/infra/node_modules/cdk-dia/icons/aws/Service/Arch_Database/64/Arch_Amazon-DynamoDB_64@5x.png",
+            imagescale = "true",
+            imagepos = "tc",
+            penwidth = "0",
+            shape = "node",
+            fixedsize = "true",
+            labelloc = "b",
+            width = 1.2,
+            height = 1.682,
+          ];
+          "X11CiCdStack/Dev/PasswordlessStack/Fido2AuthenticatorsTablePasswordless" [
+            label = "\nFido2AuthenticatorsTa",
+            fontsize = 12,
+            image = "/home/khine/go/src/github.com/x11-us/infra/node_modules/cdk-dia/icons/aws/Service/Arch_Database/64/Arch_Amazon-DynamoDB_64@5x.png",
+            imagescale = "true",
+            imagepos = "tc",
+            penwidth = "0",
+            shape = "node",
+            fixedsize = "true",
+            labelloc = "b",
+            width = 1.2,
+            height = 1.682,
+          ];
+          "X11CiCdStack/Dev/PasswordlessStack/CognitoAuthorizerPasswordless" [
+            label = "\nCognitoAuthorizerPass",
+            fontsize = 12,
+            image = "/home/khine/go/src/github.com/x11-us/infra/node_modules/cdk-dia/icons/aws/Service/Arch_Networking-Content/64/Arch_Amazon-API-Gateway_64@5x.png",
+            imagescale = "true",
+            imagepos = "tc",
+            penwidth = "0",
+            shape = "node",
+            fixedsize = "true",
+            labelloc = "b",
+            width = 1.2,
+            height = 1.682,
+          ];
+          "X11CiCdStack/Dev/PasswordlessStack/ApiGatewayCloudWatchLogsRole" [
+            label = "\nApiGatewayCloudWatchL",
+            fontsize = 12,
+            image = "/home/khine/go/src/github.com/x11-us/infra/node_modules/cdk-dia/icons/aws/Service/Arch_Security-Identity-Compliance/64/Arch_AWS-Identity-and-Access-Management_64@5x.png",
+            imagescale = "true",
+            imagepos = "tc",
+            penwidth = "0",
+            shape = "node",
+            fixedsize = "true",
+            labelloc = "b",
+            width = 1.2,
+            height = 1.682,
+          ];
+          "X11CiCdStack/Dev/PasswordlessStack/ApiGatewayAccountSetting" [
+            label = " ApiGateway Account",
+            fontsize = 12,
+            image = "/home/khine/go/src/github.com/x11-us/infra/node_modules/cdk-dia/icons/aws/Service/Arch_Networking-Content/64/Arch_Amazon-API-Gateway_64@5x.png",
+            imagescale = "true",
+            imagepos = "tc",
+            penwidth = "0",
+            shape = "node",
+            fixedsize = "true",
+            labelloc = "b",
+            width = 1.2,
+            height = 1.466,
+          ];
+          "X11CiCdStack/Dev/PasswordlessStack/ReqValidator" [
+            label = " ReqValidator",
+            fontsize = 12,
+            image = "/home/khine/go/src/github.com/x11-us/infra/node_modules/cdk-dia/icons/aws/Service/Arch_Networking-Content/64/Arch_Amazon-API-Gateway_64@5x.png",
+            imagescale = "true",
+            imagepos = "tc",
+            penwidth = "0",
+            shape = "node",
+            fixedsize = "true",
+            labelloc = "b",
+            width = 1.2,
+            height = 1.466,
+          ];
+          "X11CiCdStack/Dev/PasswordlessStack/CompleteRegistrationModelPasswordless" [
+            label = "\nCompleteRegistrationM",
+            fontsize = 12,
+            image = "/home/khine/go/src/github.com/x11-us/infra/node_modules/cdk-dia/icons/aws/Service/Arch_Networking-Content/64/Arch_Amazon-API-Gateway_64@5x.png",
+            imagescale = "true",
+            imagepos = "tc",
+            penwidth = "0",
+            shape = "node",
+            fixedsize = "true",
+            labelloc = "b",
+            width = 1.2,
+            height = 1.682,
+          ];
+          "X11CiCdStack/Dev/PasswordlessStack/DeleteCredentialModelPasswordless" [
+            label = "\nDeleteCredentialModel",
+            fontsize = 12,
+            image = "/home/khine/go/src/github.com/x11-us/infra/node_modules/cdk-dia/icons/aws/Service/Arch_Networking-Content/64/Arch_Amazon-API-Gateway_64@5x.png",
+            imagescale = "true",
+            imagepos = "tc",
+            penwidth = "0",
+            shape = "node",
+            fixedsize = "true",
+            labelloc = "b",
+            width = 1.2,
+            height = 1.682,
+          ];
+          "X11CiCdStack/Dev/PasswordlessStack/UpdateCredentialModelPasswordless" [
+            label = "\nUpdateCredentialModel",
+            fontsize = 12,
+            image = "/home/khine/go/src/github.com/x11-us/infra/node_modules/cdk-dia/icons/aws/Service/Arch_Networking-Content/64/Arch_Amazon-API-Gateway_64@5x.png",
+            imagescale = "true",
+            imagepos = "tc",
+            penwidth = "0",
+            shape = "node",
+            fixedsize = "true",
+            labelloc = "b",
+            width = 1.2,
+            height = 1.682,
+          ];
+          "X11CiCdStack/Dev/PasswordlessStack/Fido2ApiWebACLPasswordless" [
+            label = " WAFv2 WebACL",
+            fontsize = 12,
+            image = "/home/khine/go/src/github.com/x11-us/infra/node_modules/cdk-dia/icons/aws/Service/Arch_Security-Identity-Compliance/64/Arch_AWS-WAF_64@5x.png",
+            imagescale = "true",
+            imagepos = "tc",
+            penwidth = "0",
+            shape = "node",
+            fixedsize = "true",
+            labelloc = "b",
+            width = 2,
+            height = 2.266,
+          ];
+          "X11CiCdStack/Dev/PasswordlessStack/WafAssociationPasswordless" [
+            label = " WAFV2\nWEBACLASSOCIATION",
+            fontsize = 12,
+          ];
+          "X11CiCdStack/Dev/PasswordlessStack/AdduserFunction" [
+            label = " AdduserFunction",
+            fontsize = 12,
+            image = "/home/khine/go/src/github.com/x11-us/infra/node_modules/cdk-dia/icons/aws/Service/Arch_Compute/64/Arch_AWS-Lambda_64@5x.png",
+            imagescale = "true",
+            imagepos = "tc",
+            penwidth = "0",
+            shape = "node",
+            fixedsize = "true",
+            labelloc = "b",
+            width = 2,
+            height = 2.266,
+          ];
+          "X11CiCdStack/Dev/PasswordlessStack/StateMachine" [
+            label = " StateMachine",
+            fontsize = 12,
+            image = "/home/khine/go/src/github.com/x11-us/infra/node_modules/cdk-dia/icons/aws/Service/Arch_App-Integration/Arch_64/Arch_AWS-Step-Functions_64@5x.png",
+            imagescale = "true",
+            imagepos = "tc",
+            penwidth = "0",
+            shape = "node",
+            fixedsize = "true",
+            labelloc = "b",
+            width = 1.2,
+            height = 1.466,
+          ];
+          "X11CiCdStack/Dev/PasswordlessStack/AccountFunction" [
+            label = " AccountFunction",
+            fontsize = 12,
+            image = "/home/khine/go/src/github.com/x11-us/infra/node_modules/cdk-dia/icons/aws/Service/Arch_Compute/64/Arch_AWS-Lambda_64@5x.png",
+            imagescale = "true",
+            imagepos = "tc",
+            penwidth = "0",
+            shape = "node",
+            fixedsize = "true",
+            labelloc = "b",
+            width = 2,
+            height = 2.266,
+          ];
+          "X11CiCdStack/Dev/PasswordlessStack/AuthFunction" [
+            label = " AuthFunction",
+            fontsize = 12,
+            image = "/home/khine/go/src/github.com/x11-us/infra/node_modules/cdk-dia/icons/aws/Service/Arch_Compute/64/Arch_AWS-Lambda_64@5x.png",
+            imagescale = "true",
+            imagepos = "tc",
+            penwidth = "0",
+            shape = "node",
+            fixedsize = "true",
+            labelloc = "b",
+            width = 2,
+            height = 2.266,
+          ];
+          "X11CiCdStack/Dev/PasswordlessStack/FooterFunction" [
+            label = " FooterFunction",
+            fontsize = 12,
+            image = "/home/khine/go/src/github.com/x11-us/infra/node_modules/cdk-dia/icons/aws/Service/Arch_Compute/64/Arch_AWS-Lambda_64@5x.png",
+            imagescale = "true",
+            imagepos = "tc",
+            penwidth = "0",
+            shape = "node",
+            fixedsize = "true",
+            labelloc = "b",
+            width = 2,
+            height = 2.266,
+          ];
+          "X11CiCdStack/Dev/PasswordlessStack/HeaderFunction" [
+            label = " HeaderFunction",
+            fontsize = 12,
+            image = "/home/khine/go/src/github.com/x11-us/infra/node_modules/cdk-dia/icons/aws/Service/Arch_Compute/64/Arch_AWS-Lambda_64@5x.png",
+            imagescale = "true",
+            imagepos = "tc",
+            penwidth = "0",
+            shape = "node",
+            fixedsize = "true",
+            labelloc = "b",
+            width = 2,
+            height = 2.266,
+          ];
+          "X11CiCdStack/Dev/PasswordlessStack/HealthFunction" [
+            label = " HealthFunction",
+            fontsize = 12,
+            image = "/home/khine/go/src/github.com/x11-us/infra/node_modules/cdk-dia/icons/aws/Service/Arch_Compute/64/Arch_AWS-Lambda_64@5x.png",
+            imagescale = "true",
+            imagepos = "tc",
+            penwidth = "0",
+            shape = "node",
+            fixedsize = "true",
+            labelloc = "b",
+            width = 2,
+            height = 2.266,
+          ];
+          "X11CiCdStack/Dev/PasswordlessStack/NotifyFunction" [
+            label = " NotifyFunction",
+            fontsize = 12,
+            image = "/home/khine/go/src/github.com/x11-us/infra/node_modules/cdk-dia/icons/aws/Service/Arch_Compute/64/Arch_AWS-Lambda_64@5x.png",
+            imagescale = "true",
+            imagepos = "tc",
+            penwidth = "0",
+            shape = "node",
+            fixedsize = "true",
+            labelloc = "b",
+            width = 2,
+            height = 2.266,
+          ];
+          "X11CiCdStack/Dev/PasswordlessStack/TermsFunction" [
+            label = " TermsFunction",
+            fontsize = 12,
+            image = "/home/khine/go/src/github.com/x11-us/infra/node_modules/cdk-dia/icons/aws/Service/Arch_Compute/64/Arch_AWS-Lambda_64@5x.png",
+            imagescale = "true",
+            imagepos = "tc",
+            penwidth = "0",
+            shape = "node",
+            fixedsize = "true",
+            labelloc = "b",
+            width = 2,
+            height = 2.266,
+          ];
+          "X11CiCdStack/Dev/PasswordlessStack/TriggerFunction" [
+            label = " TriggerFunction",
+            fontsize = 12,
+            image = "/home/khine/go/src/github.com/x11-us/infra/node_modules/cdk-dia/icons/aws/Service/Arch_Compute/64/Arch_AWS-Lambda_64@5x.png",
+            imagescale = "true",
+            imagepos = "tc",
+            penwidth = "0",
+            shape = "node",
+            fixedsize = "true",
+            labelloc = "b",
+            width = 2,
+            height = 2.266,
+          ];
+          "X11CiCdStack/Dev/PasswordlessStack/VersionFunction" [
+            label = " VersionFunction",
+            fontsize = 12,
+            image = "/home/khine/go/src/github.com/x11-us/infra/node_modules/cdk-dia/icons/aws/Service/Arch_Compute/64/Arch_AWS-Lambda_64@5x.png",
+            imagescale = "true",
+            imagepos = "tc",
+            penwidth = "0",
+            shape = "node",
+            fixedsize = "true",
+            labelloc = "b",
+            width = 2,
+            height = 2.266,
+          ];
+          "X11CiCdStack/Dev/PasswordlessStack/LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8a/ServiceRole" [
+            label = " ServiceRole",
+            fontsize = 12,
+            image = "/home/khine/go/src/github.com/x11-us/infra/node_modules/cdk-dia/icons/aws/Service/Arch_Security-Identity-Compliance/64/Arch_AWS-Identity-and-Access-Management_64@5x.png",
+            imagescale = "true",
+            imagepos = "tc",
+            penwidth = "0",
+            shape = "node",
+            fixedsize = "true",
+            labelloc = "b",
+            width = 1.2,
+            height = 1.466,
+          ];
+          subgraph "cluster-SubGraph.Passwordless" {
+            graph [
+              label = "Passwordless",
+              labelloc = "b",
+              labeljust = "l",
+              margin = "10",
+              fontsize = "16",
+              penwidth = "2",
+              pencolor = "#888888",
+              style = "filled,rounded",
+              fillcolor = "#b9b9b9",
+            ];
+            "X11CiCdStack/Dev/PasswordlessStack/Passwordless/KmsKeyRsaPasswordless" [
+              label = "\nKmsKeyRsaPasswordless",
+              fontsize = 12,
+              image = "/home/khine/go/src/github.com/x11-us/infra/node_modules/cdk-dia/icons/aws/Service/Arch_Security-Identity-Compliance/64/Arch_AWS-Key-Management-Services_64@5x.png",
+              imagescale = "true",
+              imagepos = "tc",
+              penwidth = "0",
+              shape = "node",
+              fixedsize = "true",
+              labelloc = "b",
+              width = 2,
+              height = 2.4819999999999998,
+            ];
+            "X11CiCdStack/Dev/PasswordlessStack/Passwordless/PreSignupPasswordless" [
+              label = "\nPreSignupPasswordless",
+              fontsize = 12,
+              image = "/home/khine/go/src/github.com/x11-us/infra/node_modules/cdk-dia/icons/aws/Service/Arch_Compute/64/Arch_AWS-Lambda_64@5x.png",
+              imagescale = "true",
+              imagepos = "tc",
+              penwidth = "0",
+              shape = "node",
+              fixedsize = "true",
+              labelloc = "b",
+              width = 2,
+              height = 2.4819999999999998,
+            ];
+            "X11CiCdStack/Dev/PasswordlessStack/Passwordless/CreateAuthChallengePasswordless" [
+              label = "\nCreateAuthChallengePa",
+              fontsize = 12,
+              image = "/home/khine/go/src/github.com/x11-us/infra/node_modules/cdk-dia/icons/aws/Service/Arch_Compute/64/Arch_AWS-Lambda_64@5x.png",
+              imagescale = "true",
+              imagepos = "tc",
+              penwidth = "0",
+              shape = "node",
+              fixedsize = "true",
+              labelloc = "b",
+              width = 2,
+              height = 2.4819999999999998,
+            ];
+            "X11CiCdStack/Dev/PasswordlessStack/Passwordless/VerifyAuthChallengeResponsePasswordless" [
+              label = "\nVerifyAuthChallengeRe",
+              fontsize = 12,
+              image = "/home/khine/go/src/github.com/x11-us/infra/node_modules/cdk-dia/icons/aws/Service/Arch_Compute/64/Arch_AWS-Lambda_64@5x.png",
+              imagescale = "true",
+              imagepos = "tc",
+              penwidth = "0",
+              shape = "node",
+              fixedsize = "true",
+              labelloc = "b",
+              width = 2,
+              height = 2.4819999999999998,
+            ];
+            "X11CiCdStack/Dev/PasswordlessStack/Passwordless/DefineAuthChallengePasswordless" [
+              label = "\nDefineAuthChallengePa",
+              fontsize = 12,
+              image = "/home/khine/go/src/github.com/x11-us/infra/node_modules/cdk-dia/icons/aws/Service/Arch_Compute/64/Arch_AWS-Lambda_64@5x.png",
+              imagescale = "true",
+              imagepos = "tc",
+              penwidth = "0",
+              shape = "node",
+              fixedsize = "true",
+              labelloc = "b",
+              width = 2,
+              height = 2.4819999999999998,
+            ];
+            "X11CiCdStack/Dev/PasswordlessStack/Passwordless/PreTokenPasswordless" [
+              label = " PreTokenPasswordless",
+              fontsize = 12,
+              image = "/home/khine/go/src/github.com/x11-us/infra/node_modules/cdk-dia/icons/aws/Service/Arch_Compute/64/Arch_AWS-Lambda_64@5x.png",
+              imagescale = "true",
+              imagepos = "tc",
+              penwidth = "0",
+              shape = "node",
+              fixedsize = "true",
+              labelloc = "b",
+              width = 2,
+              height = 2.266,
+            ];
+            "X11CiCdStack/Dev/PasswordlessStack/Passwordless/Fido2NotificationPasswordless" [
+              label = "\nFido2NotificationPass",
+              fontsize = 12,
+              image = "/home/khine/go/src/github.com/x11-us/infra/node_modules/cdk-dia/icons/aws/Service/Arch_Compute/64/Arch_AWS-Lambda_64@5x.png",
+              imagescale = "true",
+              imagepos = "tc",
+              penwidth = "0",
+              shape = "node",
+              fixedsize = "true",
+              labelloc = "b",
+              width = 2,
+              height = 2.4819999999999998,
+            ];
+            "X11CiCdStack/Dev/PasswordlessStack/Passwordless/Fido2Passwordless" [
+              label = " Fido2Passwordless",
+              fontsize = 12,
+              image = "/home/khine/go/src/github.com/x11-us/infra/node_modules/cdk-dia/icons/aws/Service/Arch_Compute/64/Arch_AWS-Lambda_64@5x.png",
+              imagescale = "true",
+              imagepos = "tc",
+              penwidth = "0",
+              shape = "node",
+              fixedsize = "true",
+              labelloc = "b",
+              width = 2,
+              height = 2.266,
+            ];
+            "X11CiCdStack/Dev/PasswordlessStack/Passwordless/Fido2ChallengePasswordless" [
+              label = "\nFido2ChallengePasswor",
+              fontsize = 12,
+              image = "/home/khine/go/src/github.com/x11-us/infra/node_modules/cdk-dia/icons/aws/Service/Arch_Compute/64/Arch_AWS-Lambda_64@5x.png",
+              imagescale = "true",
+              imagepos = "tc",
+              penwidth = "0",
+              shape = "node",
+              fixedsize = "true",
+              labelloc = "b",
+              width = 2,
+              height = 2.4819999999999998,
+            ];
+            "X11CiCdStack/Dev/PasswordlessStack/Passwordless/ApigwAccessLogsPasswordless" [
+              label = "\nApigwAccessLogsPasswo",
+              fontsize = 12,
+              image = "/home/khine/go/src/github.com/x11-us/infra/node_modules/cdk-dia/icons/aws/Resource/Res_Management-Governance/Res_48_Dark/Res_Amazon-Cloudwatch_Logs_48_Dark_gen.png",
+              imagescale = "true",
+              imagepos = "tc",
+              penwidth = "0",
+              shape = "node",
+              fixedsize = "true",
+              labelloc = "b",
+              width = 2,
+              height = 2.4819999999999998,
+            ];
+            "X11CiCdStack/Dev/PasswordlessStack/Passwordless/RestApiPasswordless" [
+              label = " RestApiPasswordless",
+              fontsize = 12,
+              image = "/home/khine/go/src/github.com/x11-us/infra/node_modules/cdk-dia/icons/aws/Service/Arch_Networking-Content/64/Arch_Amazon-API-Gateway_64@5x.png",
+              imagescale = "true",
+              imagepos = "tc",
+              penwidth = "0",
+              shape = "node",
+              fixedsize = "true",
+              labelloc = "b",
+              width = 1.2,
+              height = 1.466,
+            ];
+          }
+        }
+        subgraph "cluster-SubGraph.DistributionStack" {
+          graph [
+            label = "DistributionStack",
+            labelloc = "b",
+            labeljust = "l",
+            margin = "10",
+            fontsize = "16",
+            penwidth = "2",
+            pencolor = "#888888",
+            style = "filled,rounded",
+            fillcolor = "#c7c7c7",
+          ];
+          "X11CiCdStack/Dev/DistributionStack/Distributionwebsite/CFDistribution" [
+            label = " CloudFront\nDistribution\nCFDistribution",
+            fontsize = 12,
+            image = "/home/khine/go/src/github.com/x11-us/infra/node_modules/cdk-dia/icons/aws/Service/Arch_Networking-Content/64/Arch_Amazon-CloudFront_64@5x.png",
+            imagescale = "true",
+            imagepos = "tc",
+            penwidth = "0",
+            shape = "node",
+            fixedsize = "true",
+            labelloc = "b",
+            width = 2,
+            height = 2.6979999999999995,
+          ];
+        }
+        subgraph "cluster-SubGraph.DistributionPipelineStack" {
+          graph [
+            label = "DistributionPipelineStack",
+            labelloc = "b",
+            labeljust = "l",
+            margin = "10",
+            fontsize = "16",
+            penwidth = "2",
+            pencolor = "#888888",
+            style = "filled,rounded",
+            fillcolor = "#c7c7c7",
+          ];
+          "X11CiCdStack/Dev/DistributionPipelineStack/Pipeline_website" [
+            label = " Pipeline_website",
+            fontsize = 12,
+            image = "/home/khine/go/src/github.com/x11-us/infra/node_modules/cdk-dia/icons/aws/Service/Arch_Developer- Tools/64/Arch_AWS-CodePipeline_64@5x.png",
+            imagescale = "true",
+            imagepos = "tc",
+            penwidth = "0",
+            shape = "node",
+            fixedsize = "true",
+            labelloc = "b",
+            width = 1.2,
+            height = 1.466,
+          ];
+          "X11CiCdStack/Dev/DistributionPipelineStack/PipelineProject_website" [
+            label = " PipelineProject\nwebsite",
+            fontsize = 12,
+            image = "/home/khine/go/src/github.com/x11-us/infra/node_modules/cdk-dia/icons/aws/Service/Arch_Developer- Tools/64/Arch_Amazon-CodeBuild_64@5x.png",
+            imagescale = "true",
+            imagepos = "tc",
+            penwidth = "0",
+            shape = "node",
+            fixedsize = "true",
+            labelloc = "b",
+            width = 1.2,
+            height = 1.682,
+          ];
+          "X11CiCdStack/Dev/DistributionPipelineStack/CfInvalidatorwebsite" [
+            label = " CfInvalidatorwebsite",
+            fontsize = 12,
+            image = "/home/khine/go/src/github.com/x11-us/infra/node_modules/cdk-dia/icons/aws/Service/Arch_Compute/64/Arch_AWS-Lambda_64@5x.png",
+            imagescale = "true",
+            imagepos = "tc",
+            penwidth = "0",
+            shape = "node",
+            fixedsize = "true",
+            labelloc = "b",
+            width = 2,
+            height = 2.266,
+          ];
+          "X11CiCdStack/Dev/DistributionPipelineStack/LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8a/ServiceRole" [
+            label = " ServiceRole",
+            fontsize = 12,
+            image = "/home/khine/go/src/github.com/x11-us/infra/node_modules/cdk-dia/icons/aws/Service/Arch_Security-Identity-Compliance/64/Arch_AWS-Identity-and-Access-Management_64@5x.png",
+            imagescale = "true",
+            imagepos = "tc",
+            penwidth = "0",
+            shape = "node",
+            fixedsize = "true",
+            labelloc = "b",
+            width = 1.2,
+            height = 1.466,
+          ];
+        }
+      }
+      subgraph "cluster-SubGraph.GithubTrigger" {
+        graph [
+          label = "GithubTrigger",
+          labelloc = "b",
+          labeljust = "l",
+          margin = "10",
+          fontsize = "16",
+          penwidth = "2",
+          pencolor = "#888888",
+          style = "filled,rounded",
+          fillcolor = "#d6d6d6",
+        ];
+        "X11CiCdStack/GithubTrigger/TriggerFn" [
+          label = " TriggerFn",
+          fontsize = 12,
+          image = "/home/khine/go/src/github.com/x11-us/infra/node_modules/cdk-dia/icons/aws/Service/Arch_Compute/64/Arch_AWS-Lambda_64@5x.png",
+          imagescale = "true",
+          imagepos = "tc",
+          penwidth = "0",
+          shape = "node",
+          fixedsize = "true",
+          labelloc = "b",
+          width = 2,
+          height = 2.266,
+        ];
+        "X11CiCdStack/GithubTrigger/WebhookManager" [
+          label = " CloudFormation\nCustomResource\nWebhookManager",
+          fontsize = 12,
+          image = "/home/khine/go/src/github.com/x11-us/infra/node_modules/cdk-dia/icons/aws/Service/Arch_Management-Governance/64/Arch_AWS-CloudFormation_64@5x.png",
+          imagescale = "true",
+          imagepos = "tc",
+          penwidth = "0",
+          shape = "node",
+          fixedsize = "true",
+          labelloc = "b",
+          width = 1.2,
+          height = 1.898,
+        ];
+        "X11CiCdStack/GithubTrigger/WebhookManagerProvider/framework-onEvent" [
+          label = " framework-onEvent",
+          fontsize = 12,
+          image = "/home/khine/go/src/github.com/x11-us/infra/node_modules/cdk-dia/icons/aws/Service/Arch_Compute/64/Arch_AWS-Lambda_64@5x.png",
+          imagescale = "true",
+          imagepos = "tc",
+          penwidth = "0",
+          shape = "node",
+          fixedsize = "true",
+          labelloc = "b",
+          width = 2,
+          height = 2.266,
+        ];
+      }
+      subgraph "cluster-SubGraph.WebsiteGithubTrigger" {
+        graph [
+          label = "WebsiteGithubTrigger",
+          labelloc = "b",
+          labeljust = "l",
+          margin = "10",
+          fontsize = "16",
+          penwidth = "2",
+          pencolor = "#888888",
+          style = "filled,rounded",
+          fillcolor = "#d6d6d6",
+        ];
+        "X11CiCdStack/WebsiteGithubTrigger/TriggerFn" [
+          label = " TriggerFn",
+          fontsize = 12,
+          image = "/home/khine/go/src/github.com/x11-us/infra/node_modules/cdk-dia/icons/aws/Service/Arch_Compute/64/Arch_AWS-Lambda_64@5x.png",
+          imagescale = "true",
+          imagepos = "tc",
+          penwidth = "0",
+          shape = "node",
+          fixedsize = "true",
+          labelloc = "b",
+          width = 2,
+          height = 2.266,
+        ];
+        "X11CiCdStack/WebsiteGithubTrigger/WebhookManager" [
+          label = " CloudFormation\nCustomResource\nWebhookManager",
+          fontsize = 12,
+          image = "/home/khine/go/src/github.com/x11-us/infra/node_modules/cdk-dia/icons/aws/Service/Arch_Management-Governance/64/Arch_AWS-CloudFormation_64@5x.png",
+          imagescale = "true",
+          imagepos = "tc",
+          penwidth = "0",
+          shape = "node",
+          fixedsize = "true",
+          labelloc = "b",
+          width = 1.2,
+          height = 1.898,
+        ];
+        "X11CiCdStack/WebsiteGithubTrigger/WebhookManagerProvider/framework-onEvent" [
+          label = " framework-onEvent",
+          fontsize = 12,
+          image = "/home/khine/go/src/github.com/x11-us/infra/node_modules/cdk-dia/icons/aws/Service/Arch_Compute/64/Arch_AWS-Lambda_64@5x.png",
+          imagescale = "true",
+          imagepos = "tc",
+          penwidth = "0",
+          shape = "node",
+          fixedsize = "true",
+          labelloc = "b",
+          width = 2,
+          height = 2.266,
+        ];
+      }
+    }
+  }
+  "X11CiCdStack/CDKPipeline/Pipeline" -> "X11CiCdStack/CDKPipeline/CodeBuildActionRole" [
+    dir = "both",
+  ];
+  "X11CiCdStack/CDKPipeline/Pipeline" -> "X11CiCdStack/CDKPipeline/UpdatePipeline/SelfMutation" [
+    dir = "both",
+  ];
+  "X11CiCdStack/CDKPipeline/Pipeline" -> "X11CiCdStack/CDKPipeline/Assets/FileAsset1" [
+    dir = "both",
+  ];
+  "X11CiCdStack/CDKPipeline/Pipeline" -> "X11CiCdStack/CDKPipeline/Assets/FileAsset10" [
+    dir = "both",
+  ];
+  "X11CiCdStack/CDKPipeline/Pipeline" -> "X11CiCdStack/CDKPipeline/Assets/FileAsset11" [
+    dir = "both",
+  ];
+  "X11CiCdStack/CDKPipeline/Pipeline" -> "X11CiCdStack/CDKPipeline/Assets/FileAsset12" [
+    dir = "both",
+  ];
+  "X11CiCdStack/CDKPipeline/Pipeline" -> "X11CiCdStack/CDKPipeline/Assets/FileAsset13" [
+    dir = "both",
+  ];
+  "X11CiCdStack/CDKPipeline/Pipeline" -> "X11CiCdStack/CDKPipeline/Assets/FileAsset14" [
+    dir = "both",
+  ];
+  "X11CiCdStack/CDKPipeline/Pipeline" -> "X11CiCdStack/CDKPipeline/Assets/FileAsset15" [
+    dir = "both",
+  ];
+  "X11CiCdStack/CDKPipeline/Pipeline" -> "X11CiCdStack/CDKPipeline/Assets/FileAsset16" [
+    dir = "both",
+  ];
+  "X11CiCdStack/CDKPipeline/Pipeline" -> "X11CiCdStack/CDKPipeline/Assets/FileAsset17" [
+    dir = "both",
+  ];
+  "X11CiCdStack/CDKPipeline/Pipeline" -> "X11CiCdStack/CDKPipeline/Assets/FileAsset18" [
+    dir = "both",
+  ];
+  "X11CiCdStack/CDKPipeline/Pipeline" -> "X11CiCdStack/CDKPipeline/Assets/FileAsset19" [
+    dir = "both",
+  ];
+  "X11CiCdStack/CDKPipeline/Pipeline" -> "X11CiCdStack/CDKPipeline/Assets/FileAsset2" [
+    dir = "both",
+  ];
+  "X11CiCdStack/CDKPipeline/Pipeline" -> "X11CiCdStack/CDKPipeline/Assets/FileAsset20" [
+    dir = "both",
+  ];
+  "X11CiCdStack/CDKPipeline/Pipeline" -> "X11CiCdStack/CDKPipeline/Assets/FileAsset3" [
+    dir = "both",
+  ];
+  "X11CiCdStack/CDKPipeline/Pipeline" -> "X11CiCdStack/CDKPipeline/Assets/FileAsset4" [
+    dir = "both",
+  ];
+  "X11CiCdStack/CDKPipeline/Pipeline" -> "X11CiCdStack/CDKPipeline/Assets/FileAsset5" [
+    dir = "both",
+  ];
+  "X11CiCdStack/CDKPipeline/Pipeline" -> "X11CiCdStack/CDKPipeline/Assets/FileAsset6" [
+    dir = "both",
+  ];
+  "X11CiCdStack/CDKPipeline/Pipeline" -> "X11CiCdStack/CDKPipeline/Assets/FileAsset7" [
+    dir = "both",
+  ];
+  "X11CiCdStack/CDKPipeline/Pipeline" -> "X11CiCdStack/CDKPipeline/Assets/FileAsset8" [
+    dir = "both",
+  ];
+  "X11CiCdStack/CDKPipeline/Pipeline" -> "X11CiCdStack/CDKPipeline/Assets/FileAsset9" [
+    dir = "both",
+  ];
+  "X11CiCdStack/CDKPipeline/CodeBuildActionRole" -> "X11CiCdStack/CDKPipeline/Pipeline" [
+    dir = "both",
+  ];
+  "X11CiCdStack/CDKPipeline/CodeBuildActionRole" -> "X11CiCdStack/CDKPipeline/UpdatePipeline/SelfMutation" [
+    dir = "both",
+  ];
+  "X11CiCdStack/CDKPipeline/CodeBuildActionRole" -> "X11CiCdStack/CDKPipeline/Assets/FileAsset1" [
+    dir = "both",
+  ];
+  "X11CiCdStack/CDKPipeline/CodeBuildActionRole" -> "X11CiCdStack/CDKPipeline/Assets/FileAsset10" [
+    dir = "both",
+  ];
+  "X11CiCdStack/CDKPipeline/CodeBuildActionRole" -> "X11CiCdStack/CDKPipeline/Assets/FileAsset11" [
+    dir = "both",
+  ];
+  "X11CiCdStack/CDKPipeline/CodeBuildActionRole" -> "X11CiCdStack/CDKPipeline/Assets/FileAsset12" [
+    dir = "both",
+  ];
+  "X11CiCdStack/CDKPipeline/CodeBuildActionRole" -> "X11CiCdStack/CDKPipeline/Assets/FileAsset13" [
+    dir = "both",
+  ];
+  "X11CiCdStack/CDKPipeline/CodeBuildActionRole" -> "X11CiCdStack/CDKPipeline/Assets/FileAsset14" [
+    dir = "both",
+  ];
+  "X11CiCdStack/CDKPipeline/CodeBuildActionRole" -> "X11CiCdStack/CDKPipeline/Assets/FileAsset15" [
+    dir = "both",
+  ];
+  "X11CiCdStack/CDKPipeline/CodeBuildActionRole" -> "X11CiCdStack/CDKPipeline/Assets/FileAsset16" [
+    dir = "both",
+  ];
+  "X11CiCdStack/CDKPipeline/CodeBuildActionRole" -> "X11CiCdStack/CDKPipeline/Assets/FileAsset17" [
+    dir = "both",
+  ];
+  "X11CiCdStack/CDKPipeline/CodeBuildActionRole" -> "X11CiCdStack/CDKPipeline/Assets/FileAsset18" [
+    dir = "both",
+  ];
+  "X11CiCdStack/CDKPipeline/CodeBuildActionRole" -> "X11CiCdStack/CDKPipeline/Assets/FileAsset19" [
+    dir = "both",
+  ];
+  "X11CiCdStack/CDKPipeline/CodeBuildActionRole" -> "X11CiCdStack/CDKPipeline/Assets/FileAsset2" [
+    dir = "both",
+  ];
+  "X11CiCdStack/CDKPipeline/CodeBuildActionRole" -> "X11CiCdStack/CDKPipeline/Assets/FileAsset20" [
+    dir = "both",
+  ];
+  "X11CiCdStack/CDKPipeline/CodeBuildActionRole" -> "X11CiCdStack/CDKPipeline/Assets/FileAsset3" [
+    dir = "both",
+  ];
+  "X11CiCdStack/CDKPipeline/CodeBuildActionRole" -> "X11CiCdStack/CDKPipeline/Assets/FileAsset4" [
+    dir = "both",
+  ];
+  "X11CiCdStack/CDKPipeline/CodeBuildActionRole" -> "X11CiCdStack/CDKPipeline/Assets/FileAsset5" [
+    dir = "both",
+  ];
+  "X11CiCdStack/CDKPipeline/CodeBuildActionRole" -> "X11CiCdStack/CDKPipeline/Assets/FileAsset6" [
+    dir = "both",
+  ];
+  "X11CiCdStack/CDKPipeline/CodeBuildActionRole" -> "X11CiCdStack/CDKPipeline/Assets/FileAsset7" [
+    dir = "both",
+  ];
+  "X11CiCdStack/CDKPipeline/CodeBuildActionRole" -> "X11CiCdStack/CDKPipeline/Assets/FileAsset8" [
+    dir = "both",
+  ];
+  "X11CiCdStack/CDKPipeline/CodeBuildActionRole" -> "X11CiCdStack/CDKPipeline/Assets/FileAsset9" [
+    dir = "both",
+  ];
+  "X11CiCdStack/CDKPipeline/Assets/FileRole" -> "X11CiCdStack/CDKPipeline/Pipeline" [
+    dir = "both",
+  ];
+  "X11CiCdStack/CDKPipeline/Assets/FileAsset1" -> "X11CiCdStack/CDKPipeline/Pipeline" [
+    dir = "both",
+  ];
+  "X11CiCdStack/CDKPipeline/Assets/FileAsset1" -> "X11CiCdStack/CDKPipeline/Assets/FileRole" [
+    dir = "both",
+  ];
+  "X11CiCdStack/CDKPipeline/Assets/FileAsset10" -> "X11CiCdStack/CDKPipeline/Pipeline" [
+    dir = "both",
+  ];
+  "X11CiCdStack/CDKPipeline/Assets/FileAsset10" -> "X11CiCdStack/CDKPipeline/Assets/FileRole" [
+    dir = "both",
+  ];
+  "X11CiCdStack/CDKPipeline/Assets/FileAsset11" -> "X11CiCdStack/CDKPipeline/Pipeline" [
+    dir = "both",
+  ];
+  "X11CiCdStack/CDKPipeline/Assets/FileAsset11" -> "X11CiCdStack/CDKPipeline/Assets/FileRole" [
+    dir = "both",
+  ];
+  "X11CiCdStack/CDKPipeline/Assets/FileAsset12" -> "X11CiCdStack/CDKPipeline/Pipeline" [
+    dir = "both",
+  ];
+  "X11CiCdStack/CDKPipeline/Assets/FileAsset12" -> "X11CiCdStack/CDKPipeline/Assets/FileRole" [
+    dir = "both",
+  ];
+  "X11CiCdStack/CDKPipeline/Assets/FileAsset13" -> "X11CiCdStack/CDKPipeline/Pipeline" [
+    dir = "both",
+  ];
+  "X11CiCdStack/CDKPipeline/Assets/FileAsset13" -> "X11CiCdStack/CDKPipeline/Assets/FileRole" [
+    dir = "both",
+  ];
+  "X11CiCdStack/CDKPipeline/Assets/FileAsset14" -> "X11CiCdStack/CDKPipeline/Pipeline" [
+    dir = "both",
+  ];
+  "X11CiCdStack/CDKPipeline/Assets/FileAsset14" -> "X11CiCdStack/CDKPipeline/Assets/FileRole" [
+    dir = "both",
+  ];
+  "X11CiCdStack/CDKPipeline/Assets/FileAsset15" -> "X11CiCdStack/CDKPipeline/Pipeline" [
+    dir = "both",
+  ];
+  "X11CiCdStack/CDKPipeline/Assets/FileAsset15" -> "X11CiCdStack/CDKPipeline/Assets/FileRole" [
+    dir = "both",
+  ];
+  "X11CiCdStack/CDKPipeline/Assets/FileAsset16" -> "X11CiCdStack/CDKPipeline/Pipeline" [
+    dir = "both",
+  ];
+  "X11CiCdStack/CDKPipeline/Assets/FileAsset16" -> "X11CiCdStack/CDKPipeline/Assets/FileRole" [
+    dir = "both",
+  ];
+  "X11CiCdStack/CDKPipeline/Assets/FileAsset17" -> "X11CiCdStack/CDKPipeline/Pipeline" [
+    dir = "both",
+  ];
+  "X11CiCdStack/CDKPipeline/Assets/FileAsset17" -> "X11CiCdStack/CDKPipeline/Assets/FileRole" [
+    dir = "both",
+  ];
+  "X11CiCdStack/CDKPipeline/Assets/FileAsset18" -> "X11CiCdStack/CDKPipeline/Pipeline" [
+    dir = "both",
+  ];
+  "X11CiCdStack/CDKPipeline/Assets/FileAsset18" -> "X11CiCdStack/CDKPipeline/Assets/FileRole" [
+    dir = "both",
+  ];
+  "X11CiCdStack/CDKPipeline/Assets/FileAsset19" -> "X11CiCdStack/CDKPipeline/Pipeline" [
+    dir = "both",
+  ];
+  "X11CiCdStack/CDKPipeline/Assets/FileAsset19" -> "X11CiCdStack/CDKPipeline/Assets/FileRole" [
+    dir = "both",
+  ];
+  "X11CiCdStack/CDKPipeline/Assets/FileAsset2" -> "X11CiCdStack/CDKPipeline/Pipeline" [
+    dir = "both",
+  ];
+  "X11CiCdStack/CDKPipeline/Assets/FileAsset2" -> "X11CiCdStack/CDKPipeline/Assets/FileRole" [
+    dir = "both",
+  ];
+  "X11CiCdStack/CDKPipeline/Assets/FileAsset20" -> "X11CiCdStack/CDKPipeline/Pipeline" [
+    dir = "both",
+  ];
+  "X11CiCdStack/CDKPipeline/Assets/FileAsset20" -> "X11CiCdStack/CDKPipeline/Assets/FileRole" [
+    dir = "both",
+  ];
+  "X11CiCdStack/CDKPipeline/Assets/FileAsset3" -> "X11CiCdStack/CDKPipeline/Pipeline" [
+    dir = "both",
+  ];
+  "X11CiCdStack/CDKPipeline/Assets/FileAsset3" -> "X11CiCdStack/CDKPipeline/Assets/FileRole" [
+    dir = "both",
+  ];
+  "X11CiCdStack/CDKPipeline/Assets/FileAsset4" -> "X11CiCdStack/CDKPipeline/Pipeline" [
+    dir = "both",
+  ];
+  "X11CiCdStack/CDKPipeline/Assets/FileAsset4" -> "X11CiCdStack/CDKPipeline/Assets/FileRole" [
+    dir = "both",
+  ];
+  "X11CiCdStack/CDKPipeline/Assets/FileAsset5" -> "X11CiCdStack/CDKPipeline/Pipeline" [
+    dir = "both",
+  ];
+  "X11CiCdStack/CDKPipeline/Assets/FileAsset5" -> "X11CiCdStack/CDKPipeline/Assets/FileRole" [
+    dir = "both",
+  ];
+  "X11CiCdStack/CDKPipeline/Assets/FileAsset6" -> "X11CiCdStack/CDKPipeline/Pipeline" [
+    dir = "both",
+  ];
+  "X11CiCdStack/CDKPipeline/Assets/FileAsset6" -> "X11CiCdStack/CDKPipeline/Assets/FileRole" [
+    dir = "both",
+  ];
+  "X11CiCdStack/CDKPipeline/Assets/FileAsset7" -> "X11CiCdStack/CDKPipeline/Pipeline" [
+    dir = "both",
+  ];
+  "X11CiCdStack/CDKPipeline/Assets/FileAsset7" -> "X11CiCdStack/CDKPipeline/Assets/FileRole" [
+    dir = "both",
+  ];
+  "X11CiCdStack/CDKPipeline/Assets/FileAsset8" -> "X11CiCdStack/CDKPipeline/Pipeline" [
+    dir = "both",
+  ];
+  "X11CiCdStack/CDKPipeline/Assets/FileAsset8" -> "X11CiCdStack/CDKPipeline/Assets/FileRole" [
+    dir = "both",
+  ];
+  "X11CiCdStack/CDKPipeline/Assets/FileAsset9" -> "X11CiCdStack/CDKPipeline/Pipeline" [
+    dir = "both",
+  ];
+  "X11CiCdStack/CDKPipeline/Assets/FileAsset9" -> "X11CiCdStack/CDKPipeline/Assets/FileRole" [
+    dir = "both",
+  ];
+  "X11CiCdStack/CDKPipeline/UpdatePipeline/SelfMutation" -> "X11CiCdStack/CDKPipeline/Pipeline" [
+    dir = "both",
+  ];
+  "X11CiCdStack/Dev/CommonStack/CommonBucket" -> "X11CiCdStack/Dev/CommonStack/CloudFrontOAI" [
+    dir = "both",
+  ];
+  "X11CiCdStack/Dev/SesStack/defaultNotifications" -> "X11CiCdStack/Dev/SesStack/sesNotificationsTopic" [
+    dir = "both",
+  ];
+  "X11CiCdStack/Dev/SesStack/defaultNotifications" -> "X11CiCdStack/Dev/SesStack/defaultConfigSet" [
+    dir = "both",
+  ];
+  "X11CiCdStack/Dev/SesStack/domainIdentity" -> "X11CiCdStack/Dev/SesStack/defaultConfigSet" [
+    dir = "both",
+  ];
+  "X11CiCdStack/Dev/PasswordlessStack/UserPool" -> "X11CiCdStack/Dev/PasswordlessStack/Passwordless/PreSignupPasswordless" [
+    dir = "both",
+  ];
+  "X11CiCdStack/Dev/PasswordlessStack/UserPool" -> "X11CiCdStack/Dev/PasswordlessStack/Passwordless/CreateAuthChallengePasswordless" [
+    dir = "both",
+  ];
+  "X11CiCdStack/Dev/PasswordlessStack/UserPool" -> "X11CiCdStack/Dev/PasswordlessStack/Passwordless/VerifyAuthChallengeResponsePasswordless" [
+    dir = "both",
+  ];
+  "X11CiCdStack/Dev/PasswordlessStack/UserPool" -> "X11CiCdStack/Dev/PasswordlessStack/Passwordless/DefineAuthChallengePasswordless" [
+    dir = "both",
+  ];
+  "X11CiCdStack/Dev/PasswordlessStack/UserPool" -> "X11CiCdStack/Dev/PasswordlessStack/Passwordless/PreTokenPasswordless" [
+    dir = "both",
+  ];
+  "X11CiCdStack/Dev/PasswordlessStack/Passwordless/KmsKeyRsaPasswordless" -> "X11CiCdStack/Dev/PasswordlessStack/Passwordless/CreateAuthChallengePasswordless" [
+    dir = "both",
+  ];
+  "X11CiCdStack/Dev/PasswordlessStack/Passwordless/CreateAuthChallengePasswordless" -> "X11CiCdStack/Dev/PasswordlessStack/SecretsTablePasswordless" [
+    dir = "both",
+  ];
+  "X11CiCdStack/Dev/PasswordlessStack/Passwordless/CreateAuthChallengePasswordless" -> "X11CiCdStack/Dev/PasswordlessStack/Fido2AuthenticatorsTablePasswordless" [
+    dir = "both",
+  ];
+  "X11CiCdStack/Dev/PasswordlessStack/Passwordless/VerifyAuthChallengeResponsePasswordless" -> "X11CiCdStack/Dev/PasswordlessStack/SecretsTablePasswordless" [
+    dir = "both",
+  ];
+  "X11CiCdStack/Dev/PasswordlessStack/Passwordless/VerifyAuthChallengeResponsePasswordless" -> "X11CiCdStack/Dev/PasswordlessStack/Fido2AuthenticatorsTablePasswordless" [
+    dir = "both",
+  ];
+  "X11CiCdStack/Dev/PasswordlessStack/Passwordless/Fido2NotificationPasswordless" -> "X11CiCdStack/Dev/PasswordlessStack/UserPool" [
+    dir = "both",
+  ];
+  "X11CiCdStack/Dev/PasswordlessStack/Passwordless/Fido2Passwordless" -> "X11CiCdStack/Dev/PasswordlessStack/Passwordless/Fido2NotificationPasswordless" [
+    dir = "both",
+  ];
+  "X11CiCdStack/Dev/PasswordlessStack/Passwordless/Fido2Passwordless" -> "X11CiCdStack/Dev/PasswordlessStack/UserPool" [
+    dir = "both",
+  ];
+  "X11CiCdStack/Dev/PasswordlessStack/Passwordless/Fido2Passwordless" -> "X11CiCdStack/Dev/PasswordlessStack/Fido2AuthenticatorsTablePasswordless" [
+    dir = "both",
+  ];
+  "X11CiCdStack/Dev/PasswordlessStack/Passwordless/Fido2ChallengePasswordless" -> "X11CiCdStack/Dev/PasswordlessStack/Fido2AuthenticatorsTablePasswordless" [
+    dir = "both",
+  ];
+  "X11CiCdStack/Dev/PasswordlessStack/Passwordless/RestApiPasswordless" -> "X11CiCdStack/Dev/PasswordlessStack/Passwordless/ApigwAccessLogsPasswordless" [
+    dir = "both",
+  ];
+  "X11CiCdStack/Dev/PasswordlessStack/Passwordless/RestApiPasswordless" -> "X11CiCdStack/Dev/PasswordlessStack/Passwordless/Fido2Passwordless" [
+    dir = "both",
+  ];
+  "X11CiCdStack/Dev/PasswordlessStack/Passwordless/RestApiPasswordless" -> "X11CiCdStack/Dev/PasswordlessStack/Passwordless/Fido2ChallengePasswordless" [
+    dir = "both",
+  ];
+  "X11CiCdStack/Dev/PasswordlessStack/Passwordless/RestApiPasswordless" -> "X11CiCdStack/Dev/PasswordlessStack/CognitoAuthorizerPasswordless" [
+    dir = "both",
+  ];
+  "X11CiCdStack/Dev/PasswordlessStack/Passwordless/RestApiPasswordless" -> "X11CiCdStack/Dev/PasswordlessStack/ReqValidator" [
+    dir = "both",
+  ];
+  "X11CiCdStack/Dev/PasswordlessStack/Passwordless/RestApiPasswordless" -> "X11CiCdStack/Dev/PasswordlessStack/CompleteRegistrationModelPasswordless" [
+    dir = "both",
+  ];
+  "X11CiCdStack/Dev/PasswordlessStack/Passwordless/RestApiPasswordless" -> "X11CiCdStack/Dev/PasswordlessStack/DeleteCredentialModelPasswordless" [
+    dir = "both",
+  ];
+  "X11CiCdStack/Dev/PasswordlessStack/Passwordless/RestApiPasswordless" -> "X11CiCdStack/Dev/PasswordlessStack/UpdateCredentialModelPasswordless" [
+    dir = "both",
+  ];
+  "X11CiCdStack/Dev/PasswordlessStack/Passwordless/RestApiPasswordless" -> "X11CiCdStack/Dev/PasswordlessStack/AccountFunction" [
+    dir = "both",
+  ];
+  "X11CiCdStack/Dev/PasswordlessStack/Passwordless/RestApiPasswordless" -> "X11CiCdStack/Dev/PasswordlessStack/AuthFunction" [
+    dir = "both",
+  ];
+  "X11CiCdStack/Dev/PasswordlessStack/Passwordless/RestApiPasswordless" -> "X11CiCdStack/Dev/PasswordlessStack/FooterFunction" [
+    dir = "both",
+  ];
+  "X11CiCdStack/Dev/PasswordlessStack/Passwordless/RestApiPasswordless" -> "X11CiCdStack/Dev/PasswordlessStack/HeaderFunction" [
+    dir = "both",
+  ];
+  "X11CiCdStack/Dev/PasswordlessStack/Passwordless/RestApiPasswordless" -> "X11CiCdStack/Dev/PasswordlessStack/HealthFunction" [
+    dir = "both",
+  ];
+  "X11CiCdStack/Dev/PasswordlessStack/Passwordless/RestApiPasswordless" -> "X11CiCdStack/Dev/PasswordlessStack/NotifyFunction" [
+    dir = "both",
+  ];
+  "X11CiCdStack/Dev/PasswordlessStack/Passwordless/RestApiPasswordless" -> "X11CiCdStack/Dev/PasswordlessStack/TermsFunction" [
+    dir = "both",
+  ];
+  "X11CiCdStack/Dev/PasswordlessStack/Passwordless/RestApiPasswordless" -> "X11CiCdStack/Dev/PasswordlessStack/TriggerFunction" [
+    dir = "both",
+  ];
+  "X11CiCdStack/Dev/PasswordlessStack/Passwordless/RestApiPasswordless" -> "X11CiCdStack/Dev/PasswordlessStack/VersionFunction" [
+    dir = "both",
+  ];
+  "X11CiCdStack/Dev/PasswordlessStack/CognitoAuthorizerPasswordless" -> "X11CiCdStack/Dev/PasswordlessStack/UserPool" [
+    dir = "both",
+  ];
+  "X11CiCdStack/Dev/PasswordlessStack/CognitoAuthorizerPasswordless" -> "X11CiCdStack/Dev/PasswordlessStack/Passwordless/RestApiPasswordless" [
+    dir = "both",
+  ];
+  "X11CiCdStack/Dev/PasswordlessStack/ApiGatewayAccountSetting" -> "X11CiCdStack/Dev/PasswordlessStack/ApiGatewayCloudWatchLogsRole" [
+    dir = "both",
+  ];
+  "X11CiCdStack/Dev/PasswordlessStack/ReqValidator" -> "X11CiCdStack/Dev/PasswordlessStack/Passwordless/RestApiPasswordless" [
+    dir = "both",
+  ];
+  "X11CiCdStack/Dev/PasswordlessStack/CompleteRegistrationModelPasswordless" -> "X11CiCdStack/Dev/PasswordlessStack/Passwordless/RestApiPasswordless" [
+    dir = "both",
+  ];
+  "X11CiCdStack/Dev/PasswordlessStack/DeleteCredentialModelPasswordless" -> "X11CiCdStack/Dev/PasswordlessStack/Passwordless/RestApiPasswordless" [
+    dir = "both",
+  ];
+  "X11CiCdStack/Dev/PasswordlessStack/UpdateCredentialModelPasswordless" -> "X11CiCdStack/Dev/PasswordlessStack/Passwordless/RestApiPasswordless" [
+    dir = "both",
+  ];
+  "X11CiCdStack/Dev/PasswordlessStack/WafAssociationPasswordless" -> "X11CiCdStack/Dev/PasswordlessStack/Fido2ApiWebACLPasswordless" [
+    dir = "both",
+  ];
+  "X11CiCdStack/Dev/PasswordlessStack/WafAssociationPasswordless" -> "X11CiCdStack/Dev/PasswordlessStack/Passwordless/RestApiPasswordless" [
+    dir = "both",
+  ];
+  "X11CiCdStack/Dev/PasswordlessStack/AdduserFunction" -> "X11CiCdStack/Dev/PasswordlessStack/UserPool" [
+    dir = "both",
+  ];
+  "X11CiCdStack/Dev/PasswordlessStack/StateMachine" -> "X11CiCdStack/Dev/PasswordlessStack/Passwordless/CreateAuthChallengePasswordless" [
+    dir = "both",
+  ];
+  "X11CiCdStack/Dev/PasswordlessStack/StateMachine" -> "X11CiCdStack/Dev/PasswordlessStack/Passwordless/VerifyAuthChallengeResponsePasswordless" [
+    dir = "both",
+  ];
+  "X11CiCdStack/Dev/PasswordlessStack/StateMachine" -> "X11CiCdStack/Dev/PasswordlessStack/AdduserFunction" [
+    dir = "both",
+  ];
+  "X11CiCdStack/Dev/PasswordlessStack/StateMachine" -> "X11CiCdStack/Dev/PasswordlessStack/UserPool" [
+    dir = "both",
+  ];
+  "X11CiCdStack/Dev/PasswordlessStack/AccountFunction" -> "X11CiCdStack/Dev/PasswordlessStack/StateMachine" [
+    dir = "both",
+  ];
+  "X11CiCdStack/Dev/PasswordlessStack/AuthFunction" -> "X11CiCdStack/Dev/PasswordlessStack/Passwordless/VerifyAuthChallengeResponsePasswordless" [
+    dir = "both",
+  ];
+  "X11CiCdStack/Dev/DistributionPipelineStack/Pipeline_website" -> "X11CiCdStack/Dev/DistributionPipelineStack/PipelineProject_website" [
+    dir = "both",
+  ];
+  "X11CiCdStack/Dev/DistributionPipelineStack/Pipeline_website" -> "X11CiCdStack/Dev/DistributionPipelineStack/CfInvalidatorwebsite" [
+    dir = "both",
+  ];
+  "X11CiCdStack/GithubTrigger/TriggerFn" -> "X11CiCdStack/CDKPipeline/Pipeline" [
+    dir = "both",
+  ];
+  "X11CiCdStack/GithubTrigger/WebhookManagerProvider/framework-onEvent" -> "X11CiCdStack/SingletonLambda9548389087724e42a3ec3a06b1234567" [
+    dir = "both",
+  ];
+  "X11CiCdStack/WebsiteGithubTrigger/TriggerFn" -> "X11CiCdStack/CDKPipeline/Pipeline" [
+    dir = "both",
+  ];
+  "X11CiCdStack/WebsiteGithubTrigger/WebhookManagerProvider/framework-onEvent" -> "X11CiCdStack/SingletonLambda9548389087724e42a3ec3a06b1234567" [
+    dir = "both",
+  ];
+  "X11CiCdStack/LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8a/ServiceRole" -> "X11CiCdStack/Dev/PasswordlessStack/LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8a/ServiceRole" [
+    dir = "both",
+  ];
+}

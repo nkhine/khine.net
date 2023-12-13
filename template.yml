@@ -1,0 +1,172 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: 'AWS::Serverless-2016-10-31'
+Description: An auto-generated SAM template for Lambda functions.
+
+Resources:
+
+  AccountFunction: # Capitalize the first letter
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: ./dist/sam-local/account/
+      Handler: bootstrap
+      Runtime: go1.x
+      Tracing: Active
+      Environment:
+        Variables:
+          REGION: eu-west-1
+          STAGE: v1
+      Events:
+        GETEvent: # Capitalize the method for the event name
+          Type: Api
+          Properties:
+            Path: /v1/account
+            Method: GET
+
+  AuthFunction: # Capitalize the first letter
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: ./dist/sam-local/auth/
+      Handler: bootstrap
+      Runtime: go1.x
+      Tracing: Active
+      Environment:
+        Variables:
+          REGION: eu-west-1
+          STAGE: v1
+      Events:
+        GETEvent: # Capitalize the method for the event name
+          Type: Api
+          Properties:
+            Path: /v1/auth
+            Method: GET
+
+  FooterFunction: # Capitalize the first letter
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: ./dist/sam-local/footer/
+      Handler: bootstrap
+      Runtime: go1.x
+      Tracing: Active
+      Environment:
+        Variables:
+          REGION: eu-west-1
+          STAGE: v1
+      Events:
+        GETEvent: # Capitalize the method for the event name
+          Type: Api
+          Properties:
+            Path: /v1/footer
+            Method: GET
+
+  HeaderFunction: # Capitalize the first letter
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: ./dist/sam-local/header/
+      Handler: bootstrap
+      Runtime: go1.x
+      Tracing: Active
+      Environment:
+        Variables:
+          REGION: eu-west-1
+          STAGE: v1
+      Events:
+        GETEvent: # Capitalize the method for the event name
+          Type: Api
+          Properties:
+            Path: /v1/header
+            Method: GET
+
+  HealthFunction: # Capitalize the first letter
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: ./dist/sam-local/health/
+      Handler: bootstrap
+      Runtime: go1.x
+      Tracing: Active
+      Environment:
+        Variables:
+          REGION: eu-west-1
+          STAGE: v1
+      Events:
+        GETEvent: # Capitalize the method for the event name
+          Type: Api
+          Properties:
+            Path: /v1/health
+            Method: GET
+
+  NotifyFunction: # Capitalize the first letter
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: ./dist/sam-local/notify/
+      Handler: bootstrap
+      Runtime: go1.x
+      Tracing: Active
+      Environment:
+        Variables:
+          REGION: eu-west-1
+          STAGE: v1
+      Events:
+        GETEvent: # Capitalize the method for the event name
+          Type: Api
+          Properties:
+            Path: /v1/notify
+            Method: GET
+
+  TermsFunction: # Capitalize the first letter
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: ./dist/sam-local/terms/
+      Handler: bootstrap
+      Runtime: go1.x
+      Tracing: Active
+      Environment:
+        Variables:
+          REGION: eu-west-1
+          STAGE: v1
+      Events:
+        GETEvent: # Capitalize the method for the event name
+          Type: Api
+          Properties:
+            Path: /v1/terms
+            Method: GET
+
+  TriggerFunction: # Capitalize the first letter
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: ./dist/sam-local/trigger/
+      Handler: bootstrap
+      Runtime: go1.x
+      Tracing: Active
+      Environment:
+        Variables:
+          REGION: eu-west-1
+          STAGE: v1
+      Events:
+        GETEvent: # Capitalize the method for the event name
+          Type: Api
+          Properties:
+            Path: /v1/trigger
+            Method: GET
+
+  VersionFunction: # Capitalize the first letter
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: ./dist/sam-local/version/
+      Handler: bootstrap
+      Runtime: go1.x
+      Tracing: Active
+      Environment:
+        Variables:
+          REGION: eu-west-1
+          STAGE: v1
+      Events:
+        GETEvent: # Capitalize the method for the event name
+          Type: Api
+          Properties:
+            Path: /v1/version
+            Method: GET
+
+Outputs:
+  ApiUrl:
+    Description: "API Gateway endpoint URL for Prod environment"
+    Value: !Sub "https://.execute-api..amazonaws.com/v1/"

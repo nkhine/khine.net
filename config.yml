@@ -1,0 +1,105 @@
+---
+cicd:
+  env:
+    account: "000000000000"
+    region: "eu-west-1"
+  # yamllint disable-line rule:line-length
+  githubTokenArn: "arn:aws:secretsmanager:eu-west-1:000000000000:secret:github/budibase-ARhJvo"
+  repo:
+    owner: "khine.net"
+    repo: "infra"
+    branch: "main"
+    path: ""
+    pipelineName: "khine-infra-pipeline"
+    # TODO: Update this to point to sentry token arn
+    sentryToken: "arn:aws:secretsmanager:eu-west-1:000000000000:secret:/github/codepipeline-access-token-ZUGaM4"
+    npmToken: "arn:aws:secretsmanager:eu-west-1:000000000000:secret:/github/codepipeline-access-token-ZUGaM4"
+
+centralised: # we want to centralise out logs and notifications to a single account
+  logs:
+    env:
+      account: "000000000000"
+      region: "eu-west-1"
+    accounts: # Account ids are 12 digits - you get an error Invalid principal in policy
+      - id: "111111111111"
+        name: "khine-dev: 111111111111"
+      - id: "222222222222"
+        name: "khine-prod: 222222222222"
+ses:
+  # Notify on delivery status inc Send, Delivery, Open
+  sendDeliveryNotifications: true
+  # zoneName for the email domain is required. hostedZoneId for a Route53 domain is optional.
+  domainAttr:
+    zoneName: "domain.tld"
+    hostedZoneId: "" # the DNS is in a different account.
+  emailList:
+    - "hello@domain.tld"
+  notifyList:
+    - "sysadmin@domain.tld"
+
+dev:
+  env:
+    account: "111111111111"
+    region: "eu-west-1"
+    name: "dev"
+  # yamllint disable-line rule:line-length
+  codestarConnectionArn: "arn:aws:codestar-connections:eu-west-1:111111111111:connection/834f0ac8-c418-4577-b7cd-1bffd40d49c9"
+  cognito:
+    userPoolName: "khine"
+  repos:
+    - owner: "khine.net"
+      # yamllint disable-line rule:line-length
+      npm_token: "arn:aws:secretsmanager:eu-west-1:111111111111:secret:/npm/npm_token-SRUOU9"
+      sentryToken: "arn:aws:secretsmanager:eu-west-1:111111111111:secret:/npm/npm_token-m3pbVe"
+  passwordless:
+    allowedOrigins:
+      - "https://dev.domain.tld"
+      - "http://localhost:5173"
+    allowedRelyingPartyIds:
+      - "dev.domain.tld"
+    magicLink:
+      - sesFromAddress: "hello@domain.tld"
+    # ... [other properties]
+  distributions:
+    website:
+      owner: "khine.net"
+      repo: "website"
+      branch: "main"
+      # yamllint disable-line rule:line-length
+      # SSL Certificate must be in us-east-1
+      certificate: "arn:aws:acm:us-east-1:111111111111:certificate/efbbef20-7204-49d0-ba6d-80f7fc917aef"
+      domain:
+        - "dev.domain.tld"
+
+production:
+  env:
+    account: "222222222222"
+    region: "eu-west-1"
+    name: "prod"
+  # yamllint disable-line rule:line-length
+  codestarConnectionArn: "arn:aws:codestar-connections:eu-west-1:222222222222:connection/ccf92e33-7609-44d6-b38c-72de0ba073fa"
+  cognito:
+    userPoolName: "khine"
+  repo:
+    owner: "khine.net"
+    # yamllint disable-line rule:line-length
+    npm_token: "arn:aws:secretsmanager:eu-west-1:222222222222:secret:/npm/npm_token-mMfZdY"
+    sentryToken: "arn:aws:secretsmanager:eu-west-1:222222222222:secret:/npm/npm_token-m3pbVe"
+  passwordless:
+    allowedOrigins:
+      - "https://dev.domain.tld"
+      - "http://localhost:5173"
+    allowedRelyingPartyIds:
+      - "dev.domain.tld"
+    magicLink:
+      - sesFromAddress: "hello@domain.tld"
+  distributions:
+    website:
+      owner: "khine.net"
+      repo: "website"
+      branch: "main"
+      # yamllint disable-line rule:line-length
+      certificate: "arn:aws:acm:us-east-1:222222222222:certificate/d2f3e7ff-2845-435d-b376-77d887847f80"
+      domain:
+        - "domain.tld"
+        - "www.domain.tld"

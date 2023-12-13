@@ -1,0 +1,11 @@
+{
+  "httpMethods": ["POST"],
+  "requiresCors": true,
+  "lambdaAttributes": {
+    "description": "Add a user to the Cognito Pool",
+    "memorySize": 512,
+    "timeout": 300,
+    "logRetention": "ONE_DAY",
+    "tracing": "Active"
+  }
+}

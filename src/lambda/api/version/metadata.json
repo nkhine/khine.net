@@ -1,0 +1,10 @@
+{
+  "httpMethods": ["GET"],
+  "requiresCors": true,
+  "lambdaAttributes": {
+    "memorySize": 128,
+    "timeout": 300,
+    "logRetention": "ONE_DAY",
+    "tracing": "Disabled"
+  }
+}
