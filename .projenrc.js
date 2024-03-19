@@ -14,8 +14,6 @@ const project = new awscdk.AwsCdkTypeScriptApp({
   gitignore: [
     "!lib/*.ts",
     "!bin/*.ts",
-    "src/**/*.html",
-    "src/**/*.svg",
     "!src/lambda/workflow/email/email.html",
   ],
   deps: [

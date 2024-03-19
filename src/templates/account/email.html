@@ -1,0 +1,18 @@
+<div id="emailResponse">
+  <div class="text-center space-y-4">
+    {{ if .ErrorMessage }}
+      <div class="font-semibold text-lg mb-4 text-red-500">
+        Error: {{.ErrorMessage}}
+      </div>
+    {{ else }}
+      <div class="font-semibold text-lg mb-4">
+        Thank you for submitting your email, <span id="email">{{.Email}}</span>.
+        Please check your inbox for further instructions.
+      </div>
+      <!-- Include the token only if it's available -->
+      {{ if .Token }}
+        <div data-jwt-token="{{.Token}}"></div>
+      {{ end }}
+    {{ end }}
+  </div>
+</div>

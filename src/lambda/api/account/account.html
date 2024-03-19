@@ -1,0 +1,69 @@
+<div class="flex flex-col items-center justify-center h-full">
+  <div class="bg-white shadow-lg rounded-lg p-8 w-full h-full grid grid-rows-auto grid-flow-row gap-4 relative">
+
+    <!-- Close Button wrapped in its own grid row -->
+    <div class="absolute top-4 right-4">
+        <button @click="showModal = false" class="focus:outline-none">
+            <svg width="22" height="22" viewBox="1 1 22 22" focusable="false">
+                <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"></path>
+            </svg>
+        </button>
+    </div>
+
+    <!-- Main Content wrapped in a single column div -->
+    <div id="authenticated" class="space-y-4 px-4 py-2">
+        {{if .User}}
+        <!-- Authenticated User -->
+        <div class="text-center space-y-4">
+            <h1 class="text-xl font-bold mb-2">Welcome back</h1>
+            <div class="font-semibold text-lg mb-4">{{ .User.Email }}</div>
+
+            {{range .Items}}
+            <!-- Only show items that are meant for authenticated users -->
+            {{if or (eq .Id "FaceOrTouch") (eq .Id "MagicLink") (eq .Id "ChangeUser")}}
+            <button hx-trigger="click" hx-{{.Request}}="{{.Origin}}" hx-target="{{.Target}}" class="transition duration-300 ease-in-out py-3 px-4 inline-flex justify-center items-center gap-2 rounded-md border border-gray-800 font-semibold {{if eq .Id "FaceOrTouch"}} bg-gray-800 text-white hover:bg-gray-900 {{else}} bg-white text-gray-800 hover:bg-gray-200 {{end}} focus:outline-none w-full mb-2" {{if $.Busy}}disabled{{end}}>
+                <!-- SVG Icon here -->
+                <span>{{.Label}}</span>
+            </button>
+            {{end}}
+            {{end}}
+        </div>
+        {{else}}
+        <!-- Unauthenticated User -->
+        <div id="unauthenticated" class="space-y-4">
+            {{range .Items}}
+            {{if eq .Id "WithPassKey"}}
+            <button hx-trigger="click" hx-{{.Request}}="{{.Origin}}" hx-target="{{.Target}}" class="transition duration-300 ease-in-out py-3 px-4 inline-flex justify-center items-center gap-2 rounded-md border border-transparent font-semibold bg-gray-800 text-white hover:bg-gray-900 focus:outline-none w-full mb-2" {{if $.Busy}}disabled{{end}}>
+                <!-- SVG Icon here -->
+                <span>{{.Label}}</span>
+            </button>
+            {{end}}
+            {{end}}
+
+            <!-- Email section -->
+            {{range .Items}}
+            {{if eq .Id "Email"}}
+            <div class="text-center my-2">or</div>
+            <form class="space-y-4">
+                <label for="{{.Id}}" class="block text-sm font-medium text-gray-600">{{.Label}}</label>
+                <input type="email" id="{{.Id}}" name="email" class="border p-2 w-full" placeholder="Email" required>
+                <button hx-{{.Request}}="{{.Origin}}" hx-target="{{.Target}}" type="submit" class="transition duration-300 ease-in-out py-3 px-4 inline-flex justify-center items-center gap-2 rounded-md border border-transparent font-semibold bg-gray-800 text-white hover:bg-gray-900 focus:outline-none w-full">
+                    <!-- SVG Icon here -->
+                    <span>Next</span>
+                </button>
+            </form>
+            {{end}}
+            {{end}}
+        </div>
+        <!-- End Unauthenticated User -->
+        {{end}}
+
+        <!-- Error and loading messages -->
+        <div class="mt-4">
+            <!-- Various error/loading messages can be inserted here as divs -->
+            <!-- Example: -->
+            <div class="text-red-500">{{ .ErrorMessage }}</div>
+        </div>
+    </div>
+  </div>
+</div>

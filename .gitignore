@@ -30,8 +30,6 @@ jspm_packages/
 .cache
 !lib/*.ts
 !bin/*.ts
-src/**/*.html
-src/**/*.svg
 !src/lambda/workflow/email/email.html
 !/.projenrc.js
 !/.prettierignore
