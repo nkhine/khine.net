@@ -20,7 +20,7 @@ const project = new awscdk.AwsCdkTypeScriptApp({
   ],
   deps: [
     "yaml",
-    "amazon-cognito-passwordless-auth@0.10.0",
+    "amazon-cognito-passwordless-auth@0.13.1",
   ] /* Runtime dependencies of this module. */,
   devDeps: [
     "cdk-dia",

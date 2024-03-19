@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<head>Email verification link</head>
+<body>
+
+<style>
+body {
+  margin: 0;
+  background: #666;
+}
+a{
+  text-decoration: none;
+}
+.accept {
+  color: #FFF;
+  background: #44CC44;
+  padding: 15px 20px;
+}
+.decline {
+  color: #FFF;
+  background: tomato;
+  padding: 15px 20px;
+}
+</style>
+
+<center><br/>
+<a href="{{ .VerifiedUrl }}" class="verify">Verify your Email</a>
+</center>
+
+</body>
+</html>

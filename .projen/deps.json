@@ -84,7 +84,7 @@
     },
     {
       "name": "amazon-cognito-passwordless-auth",
-      "version": "0.10.0",
+      "version": "0.13.1",
       "type": "runtime"
     },
     {
